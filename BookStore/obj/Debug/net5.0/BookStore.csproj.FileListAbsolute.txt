@@ -58,3 +58,6 @@ D:\IDB\Asp.Net Core Api\WebGentleBookStore\BookStore\BookStore\obj\Debug\net5.0\
 D:\IDB\Asp.Net Core Api\WebGentleBookStore\BookStore\BookStore\obj\Debug\net5.0\BookStore.pdb
 D:\IDB\Asp.Net Core Api\WebGentleBookStore\BookStore\BookStore\obj\Debug\net5.0\BookStore.genruntimeconfig.cache
 D:\IDB\Asp.Net Core Api\WebGentleBookStore\BookStore\BookStore\obj\Debug\net5.0\ref\BookStore.dll
+D:\IDB\Asp.Net Core Api\WebGentleBookStore\BookStore\BookStore\bin\Debug\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\IDB\Asp.Net Core Api\WebGentleBookStore\BookStore\BookStore\bin\Debug\net5.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\IDB\Asp.Net Core Api\WebGentleBookStore\BookStore\BookStore\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
