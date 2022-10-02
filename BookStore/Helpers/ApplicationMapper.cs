@@ -6,7 +6,7 @@ namespace BookStore.Helpers
 {
     public class ApplicationMapper : Profile
     {
-        protected ApplicationMapper()
+        public ApplicationMapper()
         {
             CreateMap<Book, BookModel>();
             CreateMap<BookModel, Book>();

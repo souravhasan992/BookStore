@@ -31,7 +31,7 @@ namespace BookStore.Repository
             //).ToListAsync();
             //return records;
             var books=await _context.Books.ToListAsync();
-            return _mapper.Map<List<BookModel>>(books);
+            return _mapper.Map<List<Book>,List<BookModel>>(books);
         }
         
         public async Task<BookModel> GetBookByIdAsync(int BookId)
@@ -46,7 +46,7 @@ namespace BookStore.Repository
             //return records;
 
             var  book= await _context.Books.FindAsync(BookId);
-            return _mapper.Map<BookModel>(book);
+            return _mapper.Map<Book,BookModel>(book);
         }
         public async Task<Book> AddBookAsync(BookModel bookModel)
         {
