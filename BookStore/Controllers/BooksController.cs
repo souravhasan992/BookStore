@@ -1,6 +1,8 @@
-﻿using BookStore.Data.Models;
+﻿using BookStore.Data;
+using BookStore.Data.Models;
 using BookStore.Repository;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -41,6 +43,30 @@ namespace BookStore.Controllers
                 return BadRequest();
             }
             return CreatedAtAction(nameof(GetBookById), new {id=book.Id,Controller="books"},book);
+        }
+        
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateBookById([FromBody] BookModel bookModel,[FromRoute] int id)
+        {
+            await bookRepository.UpdateBookByIdAsync(id,bookModel);
+            
+            return Ok("Book Updated");
+        }
+
+        [HttpPatch("{id}")]
+        public async Task<IActionResult> UpdateBookByPatch([FromBody] JsonPatchDocument bookModel, [FromRoute] int id)
+        {
+            await bookRepository.UpdateBookByPatchAsync(id, bookModel);
+
+            return Ok("Book Updated By Pathch");
+        }
+        
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteBookById([FromRoute] int id)
+        {
+            await bookRepository.DeleteBookByIdAsync(id);
+
+            return Ok("Book Deleted Successfully");
         }
     }
 }
